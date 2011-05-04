@@ -1,0 +1,6 @@
+<!--<h2>Create New Page</h2>-->
+<%= form_for @page, :url => pages_url do |f| %>
+    <%= render :partial => 'form', :locals => { :f => f } %>
+
+    <%= f.submit "create" %>
+<% end %>

@@ -1,0 +1,14 @@
+<% if @page.errors.any? %>
+      <ul>
+      <% @page.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+<% end %>
+
+    <%= f.label :title, "Title" %>
+    <%= f.text_field :title %><br/>
+
+    <%= f.label :body, "Body:" %><br/>
+    <%= f.text_area :body %>
+<br/>
