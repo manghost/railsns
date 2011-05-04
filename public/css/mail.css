@@ -1,0 +1,41 @@
+@charset "gb18030";
+/* CSS Document */
+
+#nav-under{
+	width:50px;
+	margin-left:640px;
+	}
+#photo-top{
+	background-image:url(../images/bg2.jpg);
+	height:60px;
+	padding-left:40px;
+	padding-top:10px;
+}
+#letsgo{
+	padding:0 20px 0 20px ;
+	padding-bottom:0;
+	height:70px;
+}
+#advice{
+	margin:10px;
+}
+input,select{
+	height:25px;
+	}
+legend{
+	margin:20px 0 20px 10px;
+	height:25px;
+	font-size:17px;
+}
+#connect{
+	vertical-align:middle;
+	background-image:url(../images/connect.jpg);
+	height:530px;
+	padding-left:20px;
+}
+#info,#propose,#more{
+	width:30%;
+	float:left;
+	margin-right:20px;
+	
+}

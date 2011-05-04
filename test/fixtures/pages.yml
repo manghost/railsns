@@ -1,0 +1,18 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  body: MyText
+  permalink: MyString
+  description: MyText
+  is_public: false
+  capacity: 10
+
+two:
+  title: MyString2
+  body: MyText2
+  permalink: MyString2
+  description: MyText2
+  is_public: false
+  capacity: 100
+

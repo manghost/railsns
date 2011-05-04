@@ -1,0 +1,22 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div id="nav">
+   <div id="nav-img">
+   <ul id="navlinks">
+    <li id="nav-img-01"><a href="../index.html"><img src="../images/home.png" width="60" height="60" alt="Home" /></a></li>
+    <li id="nav-img-02"><a href="../photo.html"><img src="../images/photo.png" width="60" height="60" alt="Photo" /></a></li>
+    <li id="nav-img-03"><a href="../blog.html"><img src="../images/hello.png" width="60" height="60" alt="Blog" /></a></li>
+    <li id="nav-img-04"><a href="../search.html"><img src="../images/search.png" width="60" height="60" alt="Search" /></a></li>
+    <li id="nav-img-05"><a href="../connect.html"><img src="../images/mail.png" width="60" height="60" alt="Mail" /></a></li>
+   </ul>
+   </div>
+   <div >
+   <ul id="nav-word" style="margin-top:-20px;">
+    <li id="nav-word-01"><a href="../index.html">Home</a></li>
+    <li id="nav-word-02"><a href="../photo.html">Photo</a></li>
+    <li id="nav-word-03"><a href="../blog.html">Blog</a></li>
+    <li id="nav-word-04"><a href="../search.html">Search</a></li>
+    <li id="nav-word-05"><a href="../connect.html">Connect</a></li>
+   </ul>
+   </div>
+ 
+ </div>

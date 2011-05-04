@@ -1,0 +1,98 @@
+@charset "gb18030";
+body{
+	margin:0;
+	padding:0;
+	 }
+p,li,td {
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:12px;
+	line-height:150%;
+	text-indent:24px;
+	}
+p.dropcap:first-later {
+	float::left;
+	width:40px;
+	font:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	line-height:50px;
+	}
+blockquote{
+	margin:0 0 0 20px;
+     }
+ul{
+	list-style:none;
+  }
+form{
+	margin:0;
+	padding:0;
+	}
+.space{         /*   this is very important for floating !!!*/
+	clear:left
+}
+/*---------hr at top--------*/
+#fenge{
+	position:absolute;
+	margin-top:145px;
+	z-index:-1;
+	width:100%;
+	   }
+/*------id define begin ---------------*/
+/*-------whole = body------------------*/
+#whole{
+/*	   background-color:#CCB;*/
+       }
+/*-------main is the center body------*/
+#main{
+      /*background-color:#D6D6D6;*/
+	  width:900px;
+	  margin-left:auto;
+	  margin-right:auto;
+	  }
+/*------------head is the hr at top----*/
+#head{
+	width:100%;
+	height:3px;
+	background:#788c03;
+	border-top:37px #444334 solid;
+}
+
+/*---------nav-----------------------*/	   
+#navlinks{
+	    margin-left:auto;
+		margin-right:auto;
+		}
+#navlinks-img  li{
+	 display:inline;
+	 margin:20px;
+	 width:60px;
+	 height:100px;
+	 padding-top:20px;
+	 }
+#navlinks-img  li  a{
+     }
+
+a:hover{
+	background-image:url(../bannerthumb2.jpg)
+	background-repeat:no-repeat;
+	}
+#nav-img-01{
+	        padding-left:160px;
+            }
+.tip{
+	position:relative;
+	text-decoration:none;
+}
+.tip:hover{
+	background:none;
+}
+.tip span {
+	display: none;
+}
+.tip:hover span{
+	display:block;
+	position:absolute;
+	top:100%;left:-17%;
+}
+#nav-under{
+	padding-left:230px;
+	margin-top:-17px;
+	}

@@ -1,0 +1,27 @@
+@charset "gb18030";
+/* CSS Document */
+
+#logo{
+	width:100%;
+}
+#photo-top{
+	background-image:url(../images/bg2.jpg);
+	height:60px;
+	padding-left:40px;
+	padding-top:10px;
+}
+#letsgo{
+	padding:0 20px 0 20px;
+}
+
+#nav-under{
+	width:50px;
+	margin-left:325px;
+	}
+
+#photo-img  li  img{
+	margin:10px;
+	}
+#photo-img  li  img:hover{
+	background-color:#D4DF55;
+}

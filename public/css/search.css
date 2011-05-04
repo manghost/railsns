@@ -1,0 +1,78 @@
+@charset "gb18030";
+/* CSS Document */
+
+#nav-under{
+	width:50px;
+	margin-left:525px;
+	}
+#photo-top{
+	background-image:url(../images/bg2.jpg);
+	height:60px;
+	padding-left:40px;
+	padding-top:10px;
+}
+#letsgo{
+	padding:10px;
+}
+#photo-t{
+	float:right;
+	width:30%;
+	padding-right:0px;
+}
+.photo-d div{
+	width:217px;
+	height:217px;
+	margin:0;
+	padding:0;
+	float:left;	
+}
+#photo01{
+	background-color:#2A3F55;
+	color:#C0DCC0;
+}
+#photo02:hover{
+	background-color:#2A3F55;
+	color:#2a3f55;
+}
+#photo03{
+	background-color:#AF0;
+	color:#2a3f55;
+}
+#photo04:hover{
+	background-color:#2A5FFF;
+	color:#af0;
+}
+#photo05:hover{
+	background-color:#007F00;
+	color:#2a3f55;
+}
+#photo06{
+	background-color:#007F00;
+	color:#2a3f55;
+}#photo07:hover{
+	background-color:#D47F55;
+	color:#2a3f55;
+}#photo08{
+	background-color:#D47F55;
+	color:#2a3f55;
+}#photo10:hover{
+	background-color:#7F9FAA;
+	color:#2a3f55;
+}
+#photo09{
+	background-color:#7F9FAA;
+	color:#2a3f55;
+}#photo11{
+	background-color:#AA5F00;
+	color:#2a3f55;
+}
+#photo12:hover{
+	background-color:#AA5F00;
+	color:#2a3f55;
+#photo-img  li{
+	display:inline-block;
+	margin:0;
+	padding:0;
+	width:210px;
+	height:210px;
+}
