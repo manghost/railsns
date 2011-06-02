@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110502025151) do
+ActiveRecord::Schema.define(:version => 20110514114414) do
 
   create_table "pages", :force => true do |t|
     t.string   "title"
@@ -22,5 +22,29 @@ ActiveRecord::Schema.define(:version => 20110502025151) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "roles", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "roles_users", :id => false, :force => true do |t|
+    t.integer "role_id"
+    t.integer "user_id"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "username"
+    t.string   "email"
+    t.string   "hashed_password"
+    t.boolean  "enabled",         :default => true
+    t.text     "profile"
+    t.datetime "last_login_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["username"], :name => "index_users_on_username"
 
 end

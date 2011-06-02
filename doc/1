@@ -1,0 +1,13 @@
+(in /home/andy/ruby/railsns)
+** Invoke db:migrate (first_time)
+** Invoke environment (first_time)
+** Execute environment
+** Execute db:migrate
+==  CreateRolesUsersJoin: migrating ===========================================
+-- create_table(:roles_users, {:id=>false})
+rake aborted!
+An error has occurred, all later migrations canceled:
+
+Mysql2::Error: Table 'roles_users' already exists: 
+
+----------

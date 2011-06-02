@@ -18,6 +18,10 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.field_with_errors{
+    border: 5px solid #788c03;
+}
+
 a{
     color: #b00;
 }
@@ -71,3 +75,9 @@ tr.even{
     float: right;
     width: 690px;
 }
+
+/* User table styling */
+table#users { width: 100%;}
+table#users th { font-size: 95%; }
+table#users td { font-size: 90%; }
+

@@ -1,11 +1,30 @@
-require 'test_helper'
+#require 'test_helper'
+require File.dirname(__FILE__) + '/../test_helper'
 
 class PageTest < ActiveSupport::TestCase
+
+  fixtures :pages
+  
   # Replace this with your real tests.
-  test "test_invalid_if_any_field_empty" do
+  test "invalid_if_any_field_empty" do
     page = Page.new
     assert !page.valid?
-    assert page.error.invalid?(:title)
-    assert page.error.invalid?(:body)
+    assert page.errors.invalid?(:title)
+    assert page.errors.invalid?(:body)
+  end
+  
+  test "valid_fields" do
+    page = pages(:valid_page)
+    assert page.valid?
+  end
+
+  test "invalid_short_title" do
+    page = pages(:invalid_page_short_title)
+     assert !page.valid?
+  end
+
+  test "auto_permalink" do
+    page = pages(:valid_with_auto_permalink)
+    assert page.valid?
   end
 end
