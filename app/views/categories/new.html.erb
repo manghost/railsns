@@ -1,0 +1,6 @@
+<h2>Create a New Category</h2>
+
+<% form_for(:category, :url => categories_path) do |f| -%>
+  <p>Name:<br /><%= f.text_field :name, :size => 60 %></p>
+  <%= submit_tag 'Save' %> or <%= link_to 'cancel', admin_categories_path %>
+<% end %>

@@ -1,5 +1,4 @@
 Railsns::Application.routes.draw do
-  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -61,7 +60,7 @@ Railsns::Application.routes.draw do
 
   resources :pages
   resources :users
-  resources :users
+  
   resources  :roles
 
 	resources :users do
@@ -71,6 +70,24 @@ Railsns::Application.routes.draw do
 	resources :users do
     resource  :roles
   end
+
+  resources :categories do
+    get :admin, :on => :collection
+  end
+
+  resources :categories do
+    resources :articles
+  end
+
+  resources :articles do
+    get :admin, :on => :collection
+  end
+
+  
+  #namespace :admin do
+  #  resources :articles,:categorys
+  #end
+
 
   match 'user/:username'=> 'users#show_by_username'
   match ':controller(/:action(/:id(.:format)))'

@@ -2,6 +2,8 @@ class UsersController < ApplicationController
   before_filter :check_administrator_role, :only => [:index, :destroy, :enable]
   before_filter :login_required, :only => [:edit, :update]
 
+
+  
   def index
     @users = User.find(:all)
   end

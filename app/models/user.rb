@@ -20,6 +20,7 @@ class User < ActiveRecord::Base
   validates_length_of :profile, :maximum => 1000
 
   has_and_belongs_to_many :roles
+  has_many :articles
 
   def before_save
     self.hashed_password = User.encrypt(password) if !password.blank?

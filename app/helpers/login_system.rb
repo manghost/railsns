@@ -28,10 +28,14 @@ module LoginSystem
   def check_administrator_role
     check_role('Administrator')
   end
+  def check_editor_role
+    check_role('Editor')
+  end
   def login_required    
     unless is_logged_in?
       flash[:alert] = "You must be logged in to do that."
       redirect_to :controller => 'account', :action => 'login'
     end
   end
+
 end
