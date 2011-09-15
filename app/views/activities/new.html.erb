@@ -1,0 +1,16 @@
+<% if @activity.errors.any? %>
+      <ul>
+      <% @activity.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+<% end %>
+
+<%= form_for :activity, :url => activities_path,:method => :post do |f| %>
+
+  <%= render :partial => 'activity', :locals => {:f => f } %><br/>
+
+  <%= submit_tag 'Save' %> or <%= link_to 'cancel', activities_path %>
+<% end -%>
+
+  <br/><br/>

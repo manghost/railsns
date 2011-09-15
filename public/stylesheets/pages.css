@@ -41,8 +41,8 @@ tr.even{
 }
 
 #container{
-    width: 860px;
-    min-width: 860px;
+    width: 960px;
+    min-width: 960px;
     margin: 0 auto;
     padding: 0;
 }
@@ -58,10 +58,10 @@ tr.even{
 #sidemenu{
     background: #d6d4b0;
     font-size: 80%;
-    float: left;
-    width: 140px;
+    float: right;
+    width: 260px;
     padding: 10px;
-    min-height: 300px;
+    min-height: 260px;
 }
 
 #sidemenu ul{
@@ -72,8 +72,8 @@ tr.even{
 
 
 #content{
-    float: right;
-    width: 690px;
+    float: left;
+    width: 660px;
 }
 
 /* User table styling */
@@ -81,3 +81,21 @@ table#users { width: 100%;}
 table#users th { font-size: 95%; }
 table#users td { font-size: 90%; }
 
+.activity{
+    border: 1px saddlebrown dashed;
+    height: 115px;
+   }
+.act_title{
+    margin: 10px 0 5px 0;
+    font-weight: 900;
+}
+.act_time_add{
+    padding-left: 120px;
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+.act_img{
+    float: left;
+    margin: 10px;
+}

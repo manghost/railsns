@@ -1,0 +1,32 @@
+
+<% @activities.each do |act| %>
+<div class="activity">
+  <div class="act_img">
+    <%= image_tag "user1.jpg" %><br/>
+    <% unless  act.owner.nil? %>
+    <% act.owner.each do |owner| %>
+      <%= owner.username %>
+    <% end %>
+  <%end%>
+  </div>
+<div class="act_title"><%= link_to  act.title, activity_path(act) %></div>
+  <div class="act_time_add">
+      Add:<%= act.location %>----------
+      Joiners:<%= act.joiner.count %>
+      
+      <br/>
+      Time:<%= act.start_at.to_s(:short) %> ~ <%= act.end_at.to_s(:short) %><br/>
+      
+  </div> 
+<%= truncate(act.synopsis, :length => 160) %>
+</div>
+
+<br/>
+
+<%end%>
+<%= will_paginate @activities %>
+<br/><br/>
+  <% if is_logged_in? %>
+    <%= link_to "Create new activity", new_activity_path %>
+  <% end %>
+<br/><br/>

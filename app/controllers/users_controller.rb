@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @statOrgActs = UserActivityship.count(:all,:conditions =>{ :user_id => @user.id, :owner => true })
   end
 
   def show_by_username

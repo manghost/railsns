@@ -9,8 +9,9 @@ class PageTest < ActiveSupport::TestCase
   test "invalid_if_any_field_empty" do
     page = Page.new
     assert !page.valid?
-    assert page.errors.invalid?(:title)
-    assert page.errors.invalid?(:body)
+    assert page.errors[:title].any?
+#    assert page.errors.invalid?(:body)
+    assert page.errors[:body].any?
   end
   
   test "valid_fields" do

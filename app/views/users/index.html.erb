@@ -1,5 +1,3 @@
-<% content_for :newuser do%>
-
 <h1>All User</h1>
 
 <table id="users">
@@ -9,6 +7,5 @@
     <th>Enabled?</th>
     <th>Roles</th>
   </tr>
-  <%= render :partial => 'user', :collection => @users %>
+  <%= render :partial => 'user', :collection => @users -%>
 </table>
-<% end %>

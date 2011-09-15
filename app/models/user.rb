@@ -4,25 +4,29 @@ class User < ActiveRecord::Base
   attr_protected :hashed_password, :enabled
   attr_accessor :password
 
-  validates :username, :presence =>true
-  validates :email, :presence => true
-  validates :password, :presence => true, :if => :password_required?
-  validates :password_confirmation,:presence => true, :if => :password_required?
-
-  validates_confirmation_of :password, :if => :password_required?
-  
-  validates_uniqueness_of :username, :case_sensitive => false
-  validates_uniqueness_of :email, :case_sensitive => false
-  
-  validates_length_of :username, :within => 3..64
-  validates_length_of :email, :within => 5..128  
-  validates_length_of :password, :within => 4..20, :if => :password_required?
-  validates_length_of :profile, :maximum => 1000
+  validates :username, 
+            :presence =>true,
+            :length => { :in => 3..64 },
+            :uniqueness => { :case_sensitive => false }
+  validates :email,
+            :presence => true,
+            :length => { :in => 5..128 },
+            :uniqueness => { :case_sensitive => false }
+  validates :password,
+            :confirmation => true,
+            :presence => true,:if => :password_required?,
+            :length => { :in => 4..20 }
+  validates :profile,
+            :length =>{ :maxnum => 1000}
 
   has_and_belongs_to_many :roles
   has_many :articles
+  has_many :user_activityships
+  has_many :activities, :through => :user_activityships
 
-  def before_save
+  before_save :hash_password_save
+
+  def hash_password_save
     self.hashed_password = User.encrypt(password) if !password.blank?
   end
 

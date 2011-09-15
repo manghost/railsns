@@ -19,6 +19,7 @@ class ArticlesController < ApplicationController
       wants.rss  { render :action => 'rss.rxml', :layout => false }
       wants.atom { render :action => 'atom.rxml', :layout => false }
     end
+    
   end
 
   def show

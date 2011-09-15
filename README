@@ -1,11 +1,17 @@
-== Welcome to Railsns which is baseed on the book "Practical Rails Social Networking Sites"
+== Welcome to Railsns!
+   THis is a practice work of some ideas about off-line activities. It based on Rails3.0. If you have any advise just feel free to mail me at andychen3037@gmail.com.
+   There are some module (such as LoginModule) coming from the book "Practical Rails Social Networking Sites".
 
-Railsns is a homeworks for myself.If you have any advise just mail me andychen3037@gmail.com
+   /*
+   欢迎来到Railsns，
+   这是我个人的习作，一个关于线下活动的一些最初的模型设想,希望用Rails3.0实现。如果您有什么建议或者意见，非常欢迎您的来信。
+   邮箱：andychen3037@gmail.com
+   项目中有些基本模块（用户登录模块，）来自于《RoR社区网站开发》一书，特此鸣谢。
+   如果您想引用，请最好指明那些模块是来自那本书上的，谢谢。
+    */
 
 
-
-
-== Description of Contents
+== Description of Contents 结构简介
 
 The default directory structure of a generated Ruby on Rails application:
 
@@ -14,6 +20,7 @@ The default directory structure of a generated Ruby on Rails application:
   |   |-- helpers
   |   |-- mailers
   |   |-- models
+  |   |-- lib
   |   `-- views
   |       `-- layouts
   |-- config
@@ -46,20 +53,32 @@ The default directory structure of a generated Ruby on Rails application:
 
 app
   Holds all the code that's specific to this particular application.
+  应用主目录，存放MVC框架的主要内容
 
 app/controllers
-  Holds controllers that should be named like weblogs_controller.rb for
+  Holds controllers that should be named like pages_controller.rb for
   automated URL mapping. All controllers should descend from
   ApplicationController which itself descends from ActionController::Base.
+  存放控制器的主目录，为了匹配路由，命名规则遵循rails惯例：复数名词+下划线+控制器。
+  每个控制器都是ApplicationController基础子类。
+
 
 app/models
   Holds models that should be named like post.rb. Models descend from
   ActiveRecord::Base by default.
+  存放模型的主目录，命名规则遵循rails惯例：单数名词
+
+app/lib
+  Holds some module in here, same as in ../lib. Named like login_system.rb
+  由于个人喜好，部分模块（同时包含控制器和主手的文件）放在这里。完全可以移到上级库文件夹。
+  命名，以模块或者类名单数，多个单词以下划线隔开。
 
 app/views
   Holds the template files for the view that should be named like
   weblogs/index.html.erb for the WeblogsController#index action. All views use
   eRuby syntax by default.
+  存放视图主目录。每个文件夹对应控制器（名称相同）。里面每个文件对应一个控制器动作。
+  （部分内部控制器没有分配视图）
 
 app/views/layouts
   Holds the template files for layouts to be used with views. This models the
@@ -67,12 +86,13 @@ app/views/layouts
   using the <tt>layout :default</tt> and create a file named default.html.erb.
   Inside default.html.erb, call <% yield %> to render the view using this
   layout.
+  默认布局模板文件夹。可自己指定渲染模板。
 
 app/helpers
   Holds view helpers that should be named like weblogs_helper.rb. These are
   generated for you automatically when using generators for controllers.
   Helpers can be used to wrap functionality for your views into methods.
-
+  
 config
   Configuration files for the Rails environment, the routing map, the database,
   and other dependencies.

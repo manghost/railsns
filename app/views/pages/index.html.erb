@@ -8,4 +8,6 @@
   </li>
 <% end %>
 </ul>
+<% if logged_in_user  and logged_in_user.has_role?('administrator') %>
 <%= link_to  'Create New Page', new_page_path %>
+<%end%>

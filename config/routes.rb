@@ -83,6 +83,7 @@ Railsns::Application.routes.draw do
     get :admin, :on => :collection
   end
 
+  resources :activities
   
   #namespace :admin do
   #  resources :articles,:categorys
